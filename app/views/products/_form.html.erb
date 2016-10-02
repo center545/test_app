@@ -1,0 +1,28 @@
+<%= simple_form_for(@product) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="container">
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+  </div>
+
+  <div class="form-inputs">
+	<% unless @product.item_specifics.blank? %>
+	   <%= f.label "Item Specifics"%>
+	   <%= f.simple_fields_for :user_specifics do |is| %>
+	      <%= render 'item_specifics_fields', f: is, object: f.object.item_specifics%>
+	   <% end %>
+	<% end %>
+  </div>
+</div>
+<div class="container">
+	  <div class="form-inputs">
+	    <%= f.input :description %>
+	  </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

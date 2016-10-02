@@ -1,0 +1,31 @@
+<div class="form-inputs">	
+	<% object.keys.each do |key| %>
+	  <div class="col-sm-6">
+		  <div class="form-inputs">
+			  <!-- %= f.label key, key, {class: "col-sm-4 control-label"} % -->
+			  <div class="col-sm-8">
+				  <% key_field = object[key]["field"]%>
+				  <% key_suggestions = object[key]["suggestions"]%>
+				  <% if key_field == "text" %>
+				    <% if @user_specifics[key].present? %>
+					  <%= f.input key, :input_html => {value: @user_specifics[key]}, class: "form-control col-sm-4 control-label" %>
+					<% else %>
+				       <%= f.input key, :input_html => {value: key_suggestions}, class: "form-control" %>
+					<% end %>
+				  <% elsif key_field == "dropdown" %>
+				  <!-- ref: http://codepen.io/cfmatre/pen/LGOdjq -->
+				    <%= f.input key, collection: (object[key]["suggestions"].map{|val| [val,val]}), selected: @user_specifics[key], :label => key, :include_blank => true, class: "combobox" %> <!-- form-control input-group dropdown-toggle" % -->
+					<!-- %= f.input key+"_hidd4en", as: :hidden % -->
+					
+				  <% elsif key_field == "checkbox" %>
+				  <%= f.input key, as: :check_boxes, 
+				        collection: key_suggestions, # .each {|item|}, 
+						label: key, 
+						checked: @user_specifics[key],
+						class: "form-control" %>				  					
+				  <% end %>
+			  </div>
+		  </div>
+	  </div>
+	<% end %>
+</div>

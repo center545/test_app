@@ -1,0 +1,16 @@
+// bootstrap-sprockets must be imported before 'bootstrap' and 'bootstrap/variables'
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@import "font-awesome";
+@import "summernote";
+
+body {padding-top:5em;}
+#remain_character_count
+{
+	margin-top: 30px;
+}
+#countchars
+{
+	margin-top: 30px;
+}

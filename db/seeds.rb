@@ -1,0 +1,16 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
+#
+# Examples:
+#
+#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
+#   Character.create(name: 'Luke', movie: movies.first)
+
+Product.create(title: 'prodcut 1', item_specifics: {"Type":{"field":"dropdown","suggestions":["Countertop Oven","Countertop Pizza Oven","Toaster Oven"]},"Brand":{"field":"text","suggestions":["Oster"]},"Features":{"field":"checkbox","suggestions":["Adjustable Racks","Auto Shut-Off","Convection Oven","Infrared Oven","Integrated Timer","Keep-Warm Setting","Multi-Function Oven","Pizza Bake Function","Removable Drip Tray","Rotisserie Included"]},"Power":{"field":"dropdown","suggestions":["100W","200W","300W","400W","500W","600W","700W","800W","900W","1000W","1100W","1200W","1300W","1400W","1500W","1600W","1700W","1800W","1900W","2000W","2100W","2200W","2300W","2400W","2500W"]},"Color":{"field":"dropdown","suggestions":["Beige","Black","Blue","Brown","Clear","Gold","Gray","Green","Ivory","Multi-Color","Orange","Pink","Purple","Red","Silver","White","Yellow"]},"Model":{"field":"text","suggestions":["Eclipse"]},"MPN":{"field":"dropdown","suggestions":["Does Not Apply"]},"Country/Region of Manufacture":{"field":"text","suggestions":["Unknown"]}}, user_specifics: {})
+
+Product.create(title: 'My next product', item_specifics: {"Brand":{"field":"text","suggestions":["Veranda"]},"MPN":{"field":"dropdown","suggestions":["Does Not Apply"]},"Country/Region of Manufacture":{"field":"text","suggestions":["United States"]}}, user_specifics: {})
+
+Product.create(title: 'another product', item_specifics: {"Type":{"field":"dropdown","suggestions":["Dutch Hoe","Garden Claw","Grape Hoe","Hand Cultivator/Grubber","Hand Hoe","High Wheel Cultivator","Hoe \u0026 Cultivator Combo","Hoop/Loop Hoe","Japanese Hoe","Long Handle Cultivator","Mixed Set","Onion Hoe","Ridging/Warren Hoe","Rotary Cultivator","Swoe Hoe","Twist Cultivator"]},"Brand":{"field":"text","suggestions":["Bully Tools"]},"MPN":{"field":"dropdown","suggestions":["Does Not Apply"]},"Features":{"field":"checkbox","suggestions":["Combination Tool","Extendable Handle","Head Only (no handle included)","Long Handle","Short Handle"]},"Country/Region of Manufacture":{"field":"text","suggestions":["United States"]}}, user_specifics: {})
+
+
+Product.create(title: 'yet another product', item_specifics: {"Type":{"field":"dropdown","suggestions":["Anvil Pruner","Bypass Pruner","Grafting Knife/Tool","Long Reach Pruner","Multi-Tool Pruner","Set","Snips","Standard Pruning Shears","Topiary Shears"]},"Brand":{"field":"text","suggestions":["Fiskars"]},"MPN":{"field":"dropdown","suggestions":["Does Not Apply"]},"Features":{"field":"checkbox","suggestions":["Comfort Grip","Cut \u0026 Hold","Geared","Left Handed","Mini","Ratchet","Short Head"]},"Country/Region of Manufacture":{"field":"text","suggestions":["Taiwan"]}}, user_specifics: {})
